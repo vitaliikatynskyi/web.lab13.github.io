@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Використання масиву arguments</title>
+</head>
+
+<body>
+    <script>
+        function calculateAverage() {
+            if (arguments.length === 0) {
+                alert("Не вказано жодного числа");
+                return;
+            }
+
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+
+            var average = sum / arguments.length;
+            document.write("Середнє значення: ", average.toFixed(2), "<br>");
+        }
+
+        calculateAverage(5, 10, 15);
+        calculateAverage(2, 8, 4, 6, 12);
+        calculateAverage(); 
+    </script>
+</body>
+
+</html>

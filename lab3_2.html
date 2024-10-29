@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Прізвище, група</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+
+			const targetDate = new Date("2024-05-18T23:59:59"); 
+
+			let today = new Date();
+			let timeLeft = targetDate.getTime() - today.getTime(); 
+			const day = 86400000;
+			const hour = 3600000; 
+			const minute = 60000;
+
+			let days = Math.floor(timeLeft / day);
+			let hours = Math.floor((timeLeft % day) / hour);
+			let minutes = Math.floor((timeLeft % hour) / minute);
+
+			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+			console.log("До дня народження залишилося ", str);
+			alert("До дня народження залишилося " + str);
+		</script>
+	</body>
+</html>

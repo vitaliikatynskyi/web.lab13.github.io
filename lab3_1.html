@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Лукомський, пп-23</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+
+			function weekDay(size, day, color) {
+				const dayElement = document.createElement("div");
+				dayElement.textContent = day;
+
+				dayElement.style.fontSize = size;
+				dayElement.style.color = color;
+
+				document.body.appendChild(dayElement);
+			}
+
+			weekDay("20px", "понеділок", "red");
+			weekDay("24px", "вівторок", "blue");
+			weekDay("28px", "середа", "green");
+			weekDay("32px", "четвер", "purple");
+			weekDay("36px", "п'ятниця", "orange");
+			weekDay("40px", "субота", "brown");
+			weekDay("44px", "неділя", "teal");
+		</script>
+	</body>
+</html>
