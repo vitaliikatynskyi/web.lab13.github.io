@@ -15,6 +15,12 @@
 			printText("<p>Шрифт за замовченням - другий рядок");
 			printText("<p>Шрифт за замовченням - трєтій рядок");  
 			printText("<p>Манший шрифт ніж попередні рядки", 14);
+				const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
 		</script>
 	</body>
 </html>
