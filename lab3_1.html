@@ -25,6 +25,12 @@
 			weekDay("36px", "п'ятниця", "orange");
 			weekDay("40px", "субота", "brown");
 			weekDay("44px", "неділя", "teal");
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
 		</script>
 	</body>
 </html>

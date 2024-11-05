@@ -23,6 +23,12 @@
 			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
 			console.log("До дня народження залишилося ", str);
 			alert("До дня народження залишилося " + str);
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
 		</script>
 	</body>
 </html>
