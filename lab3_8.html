@@ -20,18 +20,12 @@
             }
 
             var average = sum / arguments.length;
-            document.write("Середнє значення: ", average.toFixed(2), "<br>");
+            console.log("Середнє значення: " + average.toFixed(2));
         }
 
         calculateAverage(5, 10, 15);
         calculateAverage(2, 8, 4, 6, 12);
         calculateAverage(); 
-        const backButton = document.createElement("button");
-			backButton.textContent = "Назад";
-			backButton.onclick = function() {
-				window.location.href = "index.html";
-			};
-			document.body.appendChild(backButton);
     </script>
 </body>
 
