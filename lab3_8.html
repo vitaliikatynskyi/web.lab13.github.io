@@ -15,19 +15,18 @@
             }
 
             var sum = 0;
-            var args = Array.prototype.slice.call(arguments);
-            for (var i = 0; i < args.length; i++) {
-                sum += args[i];
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
             }
 
             var average = sum / arguments.length;
-            console.log("Середнє значення: " + average.toFixed(2));
+            document.write("Середнє значення: ", average.toFixed(2), "<br>");
         }
 
         calculateAverage(5, 10, 15);
         calculateAverage(2, 8, 4, 6, 12);
-        calculateAverage(2,4,10); 
+        calculateAverage(); 
     </script>
 </body>
-</html>
 
+</html>
