@@ -8,19 +8,25 @@
 		<script>
 			"use strict";
 
-			const targetDate = new Date("2025-02-04T23:59:59"); 
+			const targetDate = new Date("2025-04-02T00:00:00"); 
 
 			let today = new Date();
 			let timeLeft = targetDate.getTime() - today.getTime(); 
+
 			const day = 86400000;
-			const hour = 3600000; 
+			const hour = 3600000;
 			const minute = 60000;
+			const second = 1000;
 
 			let days = Math.floor(timeLeft / day);
-			let hours = Math.floor((timeLeft % day) / hour);
-			let minutes = Math.floor((timeLeft % hour) / minute);
+			timeLeft %= day;
+			let hours = Math.floor(timeLeft / hour);
+			timeLeft %= hour;
+			let minutes = Math.floor(timeLeft / minute);
+			timeLeft %= minute;
+			let seconds = Math.floor(timeLeft / second);
 
-			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+			let str = `${days} днів, ${hours} годин, ${minutes} хвилин, ${seconds} секунд.`;
 			console.log("До дня народження залишилося ", str);
 			alert("До дня народження залишилося " + str);
 			const backButton = document.createElement("button");
